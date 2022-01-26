@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 28, 2021 at 05:31 PM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 8.0.2
+-- Hôte : 127.0.0.1
+-- Généré le : mer. 26 jan. 2022 à 15:03
+-- Version du serveur : 10.4.22-MariaDB
+-- Version de PHP : 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,19 +18,18 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `inventory_management`
+-- Base de données : `inventory_management`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `products`
+-- Structure de la table `products`
 --
 
 CREATE TABLE `products` (
   `id_product` int(11) NOT NULL,
   `P_name` varchar(20) DEFAULT NULL,
-  `Barcode` int(11) DEFAULT NULL,
   `Quantity` int(11) DEFAULT NULL,
   `Category` varchar(10) DEFAULT NULL,
   `Price` decimal(10,2) DEFAULT NULL,
@@ -39,18 +38,18 @@ CREATE TABLE `products` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `products`
+-- Déchargement des données de la table `products`
 --
 
-INSERT INTO `products` (`id_product`, `P_name`, `Barcode`, `Quantity`, `Category`, `Price`, `image_url`, `id_user`) VALUES
-(60, 'samsung s1', 1730, 193, 'samsung', '120.00', '6060413c0bc8e6.34701128zerktouni..PNG', 2),
-(61, 'iphone s33', 2983, 123, 'iphone inc', '231.00', '60604133519b16.73291974agadir.jpg', 1),
-(62, 'motorola T1', 3094, 134, 'Motorola', '123.00', '60606aa4e4ccf2.73927815agadir.PNG', 1);
+INSERT INTO `products` (`id_product`, `P_name`, `Quantity`, `Category`, `Price`, `image_url`, `id_user`) VALUES
+(70, 'pull', 111, 'Tops', '23.00', '61eeb8c1386ae0.84649750prct.webp', 2),
+(75, 'chemise', 12, 'Tops', '123.00', '61efc8a78bf7e9.96972688prct.webp', 1),
+(80, 'SWEAT EN MAILLE', 39, 'Tops', '30.00', 'ptr1.png', 2);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `users`
+-- Structure de la table `users`
 --
 
 CREATE TABLE `users` (
@@ -63,52 +62,52 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `users`
+-- Déchargement des données de la table `users`
 --
 
 INSERT INTO `users` (`id`, `F_name`, `L_name`, `Email`, `Password`, `profile_img`) VALUES
-(1, 'Zineb', 'Belbhiriya', 'belbhiriya@gmail.com', 'zineb123', 'zineb belbhiriya.PNG'),
-(2, 'Ayoub', 'Mabrouk', 'Ayoubmabroukcontact@gmail.com', 'ayoub123', 'Ayoub.jpeg');
+(1, 'wafae', 'Belgazzar', 'wafaebel@gmail.com', 'wafae123', 'user1.PNG'),
+(2, 'Rachid', 'Naim', 'Rachid@gmail.com', 'rachid123', 'user2.jpg');
 
 --
--- Indexes for dumped tables
+-- Index pour les tables déchargées
 --
 
 --
--- Indexes for table `products`
+-- Index pour la table `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id_product`),
   ADD KEY `id_user` (`id_user`);
 
 --
--- Indexes for table `users`
+-- Index pour la table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT for table `products`
+-- AUTO_INCREMENT pour la table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id_product` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
--- AUTO_INCREMENT for table `users`
+-- AUTO_INCREMENT pour la table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- Constraints for dumped tables
+-- Contraintes pour les tables déchargées
 --
 
 --
--- Constraints for table `products`
+-- Contraintes pour la table `products`
 --
 ALTER TABLE `products`
   ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`);
