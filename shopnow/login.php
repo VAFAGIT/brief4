@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,24 +10,32 @@
 
   <title>Login</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap%27);
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap%27);
+    
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap%27');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap%27');
   </style>
 </head>
 
 <body>
- <form id="login-form" action="php/login_process.php" method="POST">
+
+  <header>
+       <div class="navbg">  
+         <img class="logo" src="img/logo.png">
+            <h1>Shop Now</h1>
+         </div> 
+</header>
+ <form id="login-form" action="php/login_process.php" method="POST" class="formlog">
     <div class="login">
       <div class="container">
         <div class="cont">
-          <h2 id="STORE">STORE MANAGEMENT</h2>
+          <h2 id="STORE">Login your account</h2>
           <div class="E-input">
-            <p class="title-nm">Email :</p>
+            <p class="title-nm"></p>
             <input type="text" class="email input" name="email" placeholder="Your Email" >
             <p class="message" id="user-is-invalid">invalid username</p>
           </div>
           <div class="E-input">
-            <p class="title-nm">Password :</p>
+            <p class="title-nm"></p>
             <input type="password" class="password input" name="password" placeholder="Your Password" >
             <p class="message" id="password-is-invalid">invalid password</p>
           </div>
@@ -39,6 +46,7 @@
   </form>
 
 <script src="js/login.js" ></script>
+
 </body>
 
 </html>

@@ -1,35 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap');
 * {
   padding: 0;
   margin: 0;
-  font-family: "Poppins";
+  font-family: "Nova Square"; 
+  border-color: #D0DC48;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+                
+          
 }
 
 body {
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #BEB624;
+ 
+ }
+ 
+.logo {
+  width: 80px;
+  height: 80px;
+}
+.navbg{
+  margin-top: 30px;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: #0d0d0d;
+  
+}
+.formlog{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
+
 body .login {
+color: black; 
+display: inline-block;
+position: relative;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: inline-block;
-  position: relative;
+  -ms-flex-align: center;
+    align-items: center;    
+
 }
 
 body .login .container {
-  background-color: #1e1d25;
   width: 535px;
   height: 540px;
   border-radius: 18px;
@@ -48,8 +64,8 @@ body .login .cont {
 body .login .cont #STORE {
   margin-bottom: 68px;
   text-align: center;
-  color: #4e97b9;
   font-size: 20px;
+  font-family: 'Montserrat';
 }
 
 body .login .title-nm {
@@ -60,31 +76,33 @@ body .login .title-nm {
 
 body .login .E-input {
   margin-top: 30px;
+  
 }
 
 body .login .E-input input {
-  background-color: #434343;
-  outline: none;
-  border: none;
+  background-color: transparent;
+  border-width: 2px;  outline: none;
+  border-color: #D0DC48;
   width: 408px;
   padding: 20px 10px;
-  color: #f9f8f9;
+  color: #c4c4c4;
+  font-family: 'poppins';
 }
 
 body .login .E-input input::-webkit-input-placeholder {
-  color: #f9f8f9;
+  color: #c4c4c4;
 }
 
 body .login .E-input input:-ms-input-placeholder {
-  color: #f9f8f9;
+  color: #c4c4c4;
 }
 
 body .login .E-input input::-ms-input-placeholder {
-  color: #f9f8f9;
+  color: #c4c4c4;
 }
 
 body .login .E-input input::placeholder {
-  color: #f9f8f9;
+  color: #c4c4c4;
 }
 
 body .login .E-input .message {
@@ -96,6 +114,7 @@ body .login .E-input .message {
           transform: scale(0);
   color: rgba(206, 75, 75, 0.842);
   font-size: 14px;
+  font-family: 'Montserrat'; 
   margin-top: 2px;
 }
 
@@ -107,7 +126,8 @@ body .login #submit-button-box button {
   cursor: pointer;
   outline: none;
   color: #f9f8f9;
-  background-color: #34657c;
+  font-family: 'Montserrat'; 
+  background-color: #BEB624;
   width: 169px;
   height: 40px;
   border: none;
@@ -116,19 +136,23 @@ body .login #submit-button-box button {
   border-radius: 3px;
 }
 
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 680px) {
   body {
     height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+   
+            color: #BEB624;
     background-color: #0d0d0d;
+  }
+  .navbg{
+   
+    height: 20px;
+    width: 20px;
+    
+  }
+  .formlog{
+   flex-direction: column;
   }
   body .login {
     -webkit-box-align: center;
@@ -136,9 +160,9 @@ body .login #submit-button-box button {
             align-items: center;
     display: inline-block;
     position: relative;
+
   }
   body .login .container {
-    background-color: #1e1d25;
     width: 400px;
     height: 540px;
     border-radius: 18px;
@@ -155,7 +179,7 @@ body .login #submit-button-box button {
   body .login .cont #STORE {
     margin-bottom: 68px;
     text-align: center;
-    color: #4e97b9;
+    color: #000;  
     font-size: 20px;
   }
   body .login .title-nm {
@@ -167,9 +191,9 @@ body .login #submit-button-box button {
     margin-top: 30px;
   }
   body .login .E-input input {
-    background-color: #434343;
+    background-color: transparent;
     outline: none;
-    border: none;
+    border-color:#BEB624;
     width: 99%;
     padding: 20px 30px;
     color: #f9f8f9;
@@ -191,7 +215,7 @@ body .login #submit-button-box button {
   }
   body .login #submit-button-box button {
     color: #f9f8f9;
-    background-color: #34657c;
+    background-color: #BEB624;
     width: 169px;
     height: 40px;
     border: none;

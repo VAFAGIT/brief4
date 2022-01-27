@@ -41,12 +41,11 @@ function verify_add(event) {
     var p_name = document.querySelector('#addproduct_popup input[name="name"]').value;
     var price = document.querySelector('#addproduct_popup input[name="price"]').value;
     var quantity = document.querySelector('#addproduct_popup input[name="quantity"]').value;
-    var bc = document.querySelector('#addproduct_popup input[name="bc"]').value;
     var Category = document.querySelector('#addproduct_popup input[name="Category"]').value;
 
     if ( (p_name.length > 0)&& (str_reg.test(p_name)) && (price.length > 0) && (!isNaN(price))
-      && (quantity.length>0)  && (!isNaN(quantity))  && (bc.length>0)  && (!isNaN(bc)) 
-      && (Category.length > 0) && (str_reg.test(Category)) 
+      && (quantity.length>0)  && (!isNaN(quantity))  &&((Category.length > 0) && (str_reg.test(Category)) ) 
+      
     ) {
         console.log('name is right');
         document.getElementById("add_form").submit();
@@ -60,12 +59,10 @@ function verify_edit(event) {
     var p_name = document.querySelector('#editproduct_popup input[name="name"]').value;
     var price = document.querySelector('#editproduct_popup input[name="price"]').value;
     var quantity = document.querySelector('#editproduct_popup input[name="quantity"]').value;
-    var bc = document.querySelector('#editproduct_popup input[name="bc"]').value;
     var Category = document.querySelector('#editproduct_popup input[name="Category"]').value;
 
     if ( (p_name.length > 0)&& (str_reg.test(p_name)) && (price.length > 0) && (!isNaN(price))
-      && (quantity.length>0)  && (!isNaN(quantity))  && (bc.length>0)  && (!isNaN(bc)) 
-      && (Category.length > 0) && (str_reg.test(Category)) 
+      && (quantity.length>0)  && (!isNaN(quantity))  &&  (Category.length > 0) && (str_reg.test(Category)) 
     ) {
         console.log('name is right');
         document.getElementById("edit_form").submit();
@@ -86,14 +83,13 @@ function edit_product(event) {
     event.stopPropagation();
 }
 function fill_edit_pop(product) {
-    document.getElementById("product_image_edit").src = "product_images/" + product.children[7].innerHTML;
+    document.getElementById("product_image_edit").src = "product_images/" + product.children[6].innerHTML;
     document.querySelector("#editproduct_popup .id.edit").value = product.children[0].innerHTML;
-    document.querySelector("#editproduct_popup .bc").value = product.children[1].innerHTML;
-    document.querySelector("#editproduct_popup .price").value = product.children[5].innerHTML.slice(0, -1);
+    document.querySelector("#editproduct_popup .name").value = product.children[1].innerHTML;
+    document.querySelector("#editproduct_popup .price").value = product.children[2].innerHTML.slice(0, -1);
     document.querySelector("#editproduct_popup .quantity").value = product.children[3].innerHTML;
-    document.querySelector("#editproduct_popup .name").value = product.children[2].innerHTML;
     document.querySelector("#editproduct_popup .Category").value = product.children[4].innerHTML;
-    document.querySelector("#editproduct_popup .owner").value = product.children[6].innerHTML;
+    document.querySelector("#editproduct_popup .owner").value = product.children[5].innerHTML;
 
 }
 
@@ -174,13 +170,12 @@ function close_info() {
 function open_info() {
 
     var product = this;
-    document.querySelector("#product-pop-up .price").innerHTML = product.children[5].innerHTML;
+    document.querySelector("#product-pop-up .name").innerHTML = product.children[1].innerHTML;
+    document.querySelector("#product-pop-up .price").innerHTML = product.children[2].innerHTML;
     document.querySelector("#product-pop-up .quantity").innerHTML = product.children[3].innerHTML;
-    document.querySelector("#product-pop-up .name").innerHTML = product.children[2].innerHTML;
     document.querySelector("#product-pop-up .Category").innerHTML = product.children[4].innerHTML;
-    document.querySelector("#product-pop-up .owner").innerHTML = product.children[6].innerHTML;
-    document.querySelector('#image_popup').src = "product_images/" + product.children[7].innerHTML;
-    // document.querySelector('#image_popup').src="/product_images/"+product.children[7].innerHTML;
+    document.querySelector("#product-pop-up .owner").innerHTML = product.children[5].innerHTML;
+    document.querySelector('#image_popup').src = "product_images/" + product.children[6].innerHTML;
     container.style.webkitFilter = "blur(6px)";
     product_pop_up.style.opacity = "1";
     product_pop_up.style.visibility = "visible";

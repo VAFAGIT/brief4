@@ -7,7 +7,16 @@
 }
 
 body {
-  background-color: #0D0D0D;
+    background-color: #E0E2D3;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.navbg{
+  display: flex;
 }
 
 #container {
@@ -37,7 +46,7 @@ body {
   font-family: "Montserrat";
   font-weight: bold;
   width: 25%;
-  background-color: #17161C;
+  background-color: #E0E2D3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,8 +58,8 @@ body {
 
 #container #nav-bar-container h1 {
   margin-top: 20px;
-  font-weight: bold;
-  color: #4E97B9;
+  color: #BEB624;
+  font-family: "Nova Square";
 }
 
 #container #nav-bar-container #nav {
@@ -89,7 +98,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: #212437;
+  background-color: #fff;
   border-top-right-radius: 20px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -101,11 +110,10 @@ body {
   -webkit-transition: all 1s;
   transition: all 1s;
   font-family: "Poppins";
-  color: white;
-  background-color: Transparent;
-  border: none;
+  color: black;
+  background-color:#E0E2D3;
   cursor: pointer;
-  border: solid 1px white;
+  border: solid 1px black;
   border-radius: 50px;
   padding: 0 15px;
   width: 150px;
@@ -115,13 +123,14 @@ body {
 
 #container #right-container #search-bar button:hover {
   border: none;
-  background-color: #4E97B9;
+  background-color: #C4C4C4;
 }
 
 #container #right-container #search-bar #user {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -134,7 +143,7 @@ body {
 }
 
 #container #right-container #search-bar #user p {
-  color: white;
+  color: black;
   padding-left: 10px;
   padding-right: 25px;
 }
@@ -146,6 +155,7 @@ body {
 #container #right-container #search-bar #search-box {
   padding: 12px 20px;
   border-radius: 50px;
+  border-color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,7 +164,8 @@ body {
           align-items: center;
   -webkit-column-gap: 40px;
           column-gap: 40px;
-  background-color: white;
+  background-color: #fff;
+  
 }
 
 #container #right-container #search-bar #search-box svg {
@@ -172,7 +183,7 @@ body {
 }
 
 #container #right-container #main-container {
-  background-color: #1E1D25;
+  background-color: #fff;
   border-bottom-right-radius: 20px;
 }
 
@@ -182,7 +193,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  color: white;
+  color: black;
 }
 
 #container #right-container #main-container #products-title p {
@@ -190,12 +201,15 @@ body {
 }
 
 #container #right-container #main-container .data-container {
-  height: 470px;
-  overflow: scroll;
+  height: 670px;
+  /* overflow: scroll; */
+ 
 }
 
 #container #right-container #main-container .data-container .data {
-  background-color: #27262C;
+  background-color: #C4C4C4 ;
+  /* text-overflow: ellipsis;
+  max-width: 20px; */
   margin-left: 20px;
   margin-bottom: 15px;
   margin-right: 20px;
@@ -206,9 +220,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
   color: white;
+  
 }
 
 #container #right-container #main-container .data-container .data p {
+  
   padding: 20px 40px 20px 40px;
 }
 
@@ -245,16 +261,18 @@ body {
           box-shadow: 0px 0px 50px black;
   top: 7%;
   left: 25%;
-  background-color: #27262C;
+  background-color: #E0E2D3;
   color: white;
   width: 51%;
   padding: 40px 50px;
   border-radius: 30px;
+ 
+  
 }
 
 .popup.container .title p {
   text-transform: uppercase;
-  color: #4E97B9;
+  color: #BEB624;
   font-weight: bold;
   font-family: "Montserrat";
   font-size: 35px;
@@ -278,6 +296,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  
 }
 
 .popup.container .content .inputs .input-line {
@@ -355,7 +374,7 @@ body {
 
 .popup.container .content .upload-image label:hover {
   border: none;
-  background-color: #4E97B9;
+  background-color: #c4c4c4;
 }
 
 .popup.container .content .upload-image input {
@@ -390,7 +409,7 @@ body {
 
 .popup.container .two-buttons button:hover {
   border: none;
-  background-color: #4E97B9;
+  background-color: #c4c4c4;
 }
 
 .popup.container .two-buttons button:nth-child(1) {
@@ -412,13 +431,13 @@ body {
   border-radius: 50px;
   padding: 40px;
   width: 53%;
-  background: #27262C;
+  background: #E0E2D3;
 }
 
 .delete-pop .title p {
   text-align: left;
   text-transform: uppercase;
-  color: #4E97B9;
+  color: #BEB624;
   font-weight: bold;
   font-family: "Montserrat";
   font-size: 35px;
@@ -459,7 +478,7 @@ body {
 
 .delete-pop .two-buttons button:hover {
   border: none;
-  background-color: #4E97B9;
+  background-color: #c4c4c4;
 }
 
 #product-pop-up {
@@ -532,9 +551,9 @@ body {
   display: none;
 }
 
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 1400px) {
   body {
-    background-color: #0D0D0D;
+    background-color: #E0E2D3;
   }
   #container {
     margin: 0px;
@@ -549,15 +568,17 @@ body {
     position: fixed;
     top: 0px;
     left: 0px;
-    color: #4E97B9;
+    color: #BEB624;
+    font-family: 'Nova Square';
     width: 100%;
     text-align: center;
     display: block;
-    background-color: #212437;
+    background-color: #E0E2D3;
   }
   #container #nav-bar-container {
     display: none;
   }
+  
   #container #right-container {
     margin-left: 0px;
   }
@@ -576,7 +597,7 @@ body {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    color: white;
+    color: black;
   }
   #container #right-container #main-container #products-title p:nth-child(3) {
     padding: 60px 30px 5px 50px;
@@ -599,7 +620,7 @@ body {
     overflow-x: hidden;
   }
   #container #right-container #main-container .data-container .data {
-    background-color: #27262C;
+    background-color: #c4c4c4;
     margin-left: 0px;
     margin-bottom: 15px;
     margin-right: 0px;
@@ -616,7 +637,8 @@ body {
   #container #right-container #main-container .data-container .data p:nth-child(1)
 , #container #right-container #main-container .data-container .data p:nth-child(2)
 , #container #right-container #main-container .data-container .data p:nth-child(5)
-, #container #right-container #main-container .data-container .data p:nth-child(7) {
+, #container #right-container #main-container .data-container .data p:nth-child(7) 
+{
     display: none;
   }
   .popup.container {
@@ -641,7 +663,7 @@ body {
   }
   .popup.container .title p {
     text-transform: uppercase;
-    color: #4E97B9;
+    color: #BEB624;
     font-weight: bold;
     font-family: "Montserrat";
     font-size: 30px;
@@ -738,7 +760,7 @@ body {
   }
   .popup.container .content .upload-image label:hover {
     border: none;
-    background-color: #4E97B9;
+    background-color: #BEB624;
   }
   .popup.container .content .upload-image input {
     display: none;
@@ -769,7 +791,7 @@ body {
   }
   .popup.container .two-buttons button:hover {
     border: none;
-    background-color: #4E97B9;
+    background-color: #BEB624;
   }
   .popup.container .two-buttons button:nth-child(1) {
     margin-right: 30px;
@@ -793,12 +815,12 @@ body {
     border-radius: 50px;
     padding: 40px;
     width: 99%;
-    background: #27262C;
+    background: #E0E2D3;
   }
   .delete-pop .title p {
     text-align: left;
     text-transform: uppercase;
-    color: #4E97B9;
+    color: #BEB624;
     font-weight: bold;
     font-family: "Montserrat";
     font-size: 29px;
@@ -835,7 +857,7 @@ body {
   }
   .delete-pop .two-buttons button:hover {
     border: none;
-    background-color: #4E97B9;
+    background-color: #c4c4c4;
   }
   #product-pop-up {
     opacity: 0;
@@ -911,8 +933,7 @@ body {
     position: fixed;
     width: 100%;
     bottom: 0px;
-    background-color: #212437;
+    background-color: #E0E2D3;
     padding: 19px;
   }
 }
-/*# sourceMappingURL=index.css.map */
